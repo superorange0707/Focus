@@ -1,111 +1,190 @@
-# Focus Search
+# Focus Search - iOS App
 
-A minimalist iOS app that helps users search across multiple platforms without getting distracted by recommendation algorithms.
+A distraction-free search app that helps users find what they need quickly without getting lost in recommendation algorithms.
 
 ## Features
 
-### 🎯 **Focus-Driven Design**
-- Clean, distraction-free interface
-- No recommendation feeds or suggested content
-- Direct search functionality
+### 🎯 **Direct Search Experience**
+- Clean, focused interface without distracting recommendations
+- Quick access to multiple platforms from one app
+- Smart search suggestions and auto-complete
 
 ### 🔍 **Multi-Platform Search**
-- **YouTube** - Search videos and channels
-- **Reddit** - Search posts and communities  
-- **Instagram** - Search posts and profiles
-- **Facebook** - Search groups and posts
-- **Twitter** - Search tweets and users
+- **YouTube**: Video tutorials, reviews, and content
+- **Reddit**: Community discussions and posts
+- **Instagram**: Visual content and hashtags
+- **Facebook**: Groups and community content
+- **Twitter**: Real-time discussions and news
+- **Google**: Comprehensive web search
+- **Bing**: Alternative search engine
 
-### 🎨 **iOS 17+ Glass Morphism UI**
-- Beautiful glass morphism effects
-- Ultra-thin material backgrounds
+### 💡 **Smart Features**
+- **Auto-suggestions**: Real-time search suggestions as you type
+- **Recent searches**: Quick access to your search history
+- **Quick search buttons**: One-tap access to popular searches
+- **Platform-specific tips**: Helpful search suggestions for each platform
+
+### 🎨 **iOS 26 Glass Style UI**
+- Modern glass morphism design
 - Smooth animations and transitions
-- Modern iOS design patterns
+- Adaptive color schemes for each platform
+- Beautiful gradient backgrounds
 
-### 📱 **Smart Result Display**
-- Platform-specific result cards
-- Rich metadata display (views, duration, upvotes, etc.)
-- Preview content without leaving the app
-- Option to open in browser or native app
+### 📱 **Smart Navigation**
+- **Native app integration**: Opens content in the appropriate app when available
+- **Browser fallback**: Seamlessly opens in Safari when native apps aren't installed
+- **Preview mode**: Quick preview of search results before opening
+- **Share functionality**: Easy sharing of search results
+
+### 🔄 **Enhanced Results**
+- **Rich previews**: Detailed content previews with metadata
+- **Adaptive result types**: Different layouts for videos, posts, articles, etc.
+- **Quick actions**: One-tap access to open, share, or bookmark content
+- **Platform indicators**: Clear visual identification of content sources
 
 ## How It Works
 
-1. **Choose Platform** - Select which platform to search (YouTube, Reddit, etc.)
-2. **Search** - Enter your query in the clean search interface
-3. **View Results** - See results in a unified, distraction-free format
-4. **Interact** - Preview content or choose to open in external apps
+### 1. **Choose Your Platform**
+Select from 7 popular platforms using the intuitive platform selector with platform-specific colors and icons.
 
-## Technical Stack
+### 2. **Smart Search Input**
+- Type your query and get real-time suggestions
+- Use quick search buttons for common searches
+- Access recent searches for quick re-finding
 
-- **iOS 17+** - Latest iOS features and design patterns
-- **SwiftUI** - Modern declarative UI framework
-- **Glass Morphism** - `.ultraThinMaterial` backgrounds
-- **Multi-Platform APIs** - YouTube Data API, Reddit API, etc.
+### 3. **Focused Results**
+- Clean, distraction-free result display
+- Rich previews with content snippets
+- Platform-specific metadata (views, duration, upvotes, etc.)
 
-## Getting Started
+### 4. **Smart Navigation**
+- **Primary action**: Opens content in the native app (if installed)
+- **Secondary action**: Opens in Safari browser
+- **Preview mode**: Quick content preview without leaving the app
+- **Share**: Easy sharing to other apps
 
-### Prerequisites
-- Xcode 15.0+
-- iOS 17.0+ deployment target
-- iPhone/iPad device or simulator
+## Technical Features
 
-### Installation
+### 🏗️ **Architecture**
+- **SwiftUI**: Modern declarative UI framework
+- **MVVM Pattern**: Clean separation of concerns
+- **ObservableObject**: Reactive data management
+- **URL Schemes**: Deep linking to external apps
+
+### 🔧 **Key Components**
+- `SearchService`: Manages search logic and suggestions
+- `URLSchemeHandler`: Handles external app navigation
+- `PlatformSelectorView`: Platform selection interface
+- `SearchInputView`: Enhanced search input with suggestions
+- `SearchResultsView`: Rich result display with actions
+
+### 📊 **Data Management**
+- **Recent searches**: Persistent local storage
+- **Search suggestions**: Smart filtering and ranking
+- **Platform metadata**: Rich result information
+- **User preferences**: Platform-specific settings
+
+## Installation
+
+### Requirements
+- iOS 15.0 or later
+- Xcode 13.0 or later
+- Swift 5.5 or later
+
+### Setup
 1. Clone the repository
 2. Open `Focus.xcodeproj` in Xcode
-3. Build and run on your device or simulator
+3. Select your development team
+4. Build and run on device or simulator
 
-## Project Structure
+### Configuration
+The app includes proper URL scheme configuration in `Info.plist` for:
+- YouTube, Reddit, Instagram, Facebook, Twitter
+- Google, Bing search engines
+- Safari browser integration
 
+## Usage Examples
+
+### For Developers
 ```
-Focus/
-├── FocusApp.swift              # App entry point
-├── ContentView.swift           # Main interface
-├── Models.swift               # Data models and services
-├── PlatformSelectorView.swift # Platform selection UI
-├── SearchInputView.swift      # Search input component
-└── SearchResultsView.swift    # Results display
+Search: "iOS tutorial" → YouTube results with video previews
+Search: "r/iOSProgramming" → Reddit community discussions
+Search: "SwiftUI tips" → Mixed platform results
 ```
 
-## API Integration
+### For Content Creators
+```
+Search: "#iOS" → Instagram visual content
+Search: "app development" → Facebook groups and communities
+Search: "coding tutorial" → YouTube educational content
+```
 
-The app currently uses simulated data for demonstration. To integrate real APIs:
-
-### YouTube Data API
-- Get API key from Google Cloud Console
-- Implement video search and metadata fetching
-
-### Reddit API
-- Register Reddit app for API access
-- Implement post search and community browsing
-
-### Other Platforms
-- Instagram Graph API (requires business account)
-- Facebook Graph API
-- Twitter API v2
+### For Researchers
+```
+Search: "iOS development" → Google comprehensive results
+Search: "SwiftUI vs UIKit" → Reddit community discussions
+Search: "App Store guidelines" → Official documentation
+```
 
 ## Design Philosophy
 
-**Focus Search** is built on the principle that users should be able to find what they're looking for without being distracted by algorithmic recommendations. The app provides:
+### 🎯 **Focus First**
+- No distracting recommendations
+- Clean, minimal interface
+- Direct access to search results
 
-- **Intentional Search** - Users choose what to search for
-- **Clean Results** - No ads, recommendations, or suggested content
-- **Platform Flexibility** - Search across multiple platforms from one interface
-- **Modern UI** - Beautiful glass morphism design that feels native to iOS
+### 🚀 **Speed Matters**
+- Instant search suggestions
+- Quick platform switching
+- Fast result loading
+
+### 🎨 **Beautiful Experience**
+- iOS 26 glass morphism design
+- Smooth animations
+- Platform-specific theming
+
+### 🔗 **Smart Integration**
+- Native app deep linking
+- Browser fallback
+- Share functionality
 
 ## Future Enhancements
 
-- [ ] Real API integration for all platforms
-- [ ] Search history and favorites
-- [ ] Advanced filtering options
-- [ ] Dark mode support
-- [ ] iPad optimization
-- [ ] Search suggestions and autocomplete
-- [ ] Offline result caching
+### Planned Features
+- **Voice search**: Speech-to-text search input
+- **Search filters**: Date, type, and platform filters
+- **Bookmarks**: Save and organize favorite results
+- **Search history**: Detailed search analytics
+- **Custom platforms**: Add your own search sources
+- **Dark mode**: Enhanced dark theme support
+- **Widgets**: Quick search from home screen
+
+### Technical Improvements
+- **Real API integration**: Replace mock data with actual APIs
+- **Offline support**: Cached results for offline viewing
+- **Search analytics**: User behavior insights
+- **Performance optimization**: Faster search and loading
+- **Accessibility**: Enhanced VoiceOver support
+
+## Contributing
+
+We welcome contributions! Please see our contributing guidelines for:
+- Code style and standards
+- Testing requirements
+- Pull request process
+- Issue reporting
 
 ## License
 
-This project is for educational and demonstration purposes.
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Support
+
+For support, questions, or feature requests:
+- Create an issue on GitHub
+- Contact the development team
+- Check our documentation
 
 ---
 
-**Focus Search** - Find what you're looking for, not what algorithms want you to see. 
+**Focus Search** - Because finding what you need shouldn't be a distraction. 
